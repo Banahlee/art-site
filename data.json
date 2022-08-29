@@ -1,0 +1,74 @@
+{
+  "art" : [
+    {
+      "id": 1,
+      "thumbnail": "pink-longneck.png",
+      "imgs": [""],
+      "title": "She",
+      "price": "private collection",
+      "descrpition": "",
+      "collection": "longnecks",
+      "category": ""
+    },
+    {
+      "id": 2,
+      "thumbnail": "white_longneck.png",
+      "imgs": [""],
+      "title": "Radiance",
+      "price": "1200",
+      "descrpition": "",
+      "collection": "longnecks",
+      "category": "for sale"
+    },
+    {
+      "id": 3,
+      "thumbnail": "blue-longneck.png",
+      "imgs": [""],
+      "title": "In Time Love Comes",
+      "price": "2550",
+      "descrpition": "",
+      "collection": "longnecks",
+      "category": "for sale"
+    },
+    {
+      "id": 4,
+      "thumbnail": "no_girls_allowed.png",
+      "imgs": [""],
+      "title": "No Girls Allowed!",
+      "price": "2200",
+      "descrpition": "",
+      "collection": "landscapes",
+      "category": "for sale"
+    },
+    {
+      "id": 5,
+      "thumbnail": "woman-forest.jpeg",
+      "imgs": [""],
+      "title": "When you hear the hounds",
+      "price": "3200",
+      "descrpition": "",
+      "collection": "landscapes",
+      "category": "for sale"
+    },
+    {
+      "id": 6,
+      "thumbnail": "z.jpeg",
+      "imgs": [""],
+      "title": "Z",
+      "price": "1800",
+      "descrpition": "",
+      "collection": "landscapes",
+      "category": "for sale"
+    },
+    {
+      "id": 7,
+      "thumbnail": "gye_nayme.jpeg",
+      "imgs": [""],
+      "title": "Gye Nayme",
+      "price": "private collection",
+      "descrpition": "",
+      "collection": "pencil",
+      "category": ""
+    }
+  ]
+}

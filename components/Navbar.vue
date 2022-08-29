@@ -1,0 +1,155 @@
+<template>
+    <div
+      class="navbar navbar-expand-lg sticky-top w-100" 
+      :class="[changeNav ? 'change-nav' : '']"
+    >
+      <div class="max-100 container col-lg-12">
+          <a href="#" class=" d-flex align-items-center navbar-brand great-vibes">
+            <img class="max-100 logo" src="@/assets/img/logo/shakur-logo.png" alt="">
+          </a>
+
+          <div class="collapse navbar-collapse justify-content-end" id="navbarCollapse mr-auto">
+              <ul class="navbar-nav">
+                  <li 
+                    v-for="link in navLinkList"
+                    :key="link.id"
+                    class="nav-item mr-5"
+                  >
+                      <p @click="scrollTo(link.linkTo)" class="nav-link text-white">{{ link.title }}</p>
+                  </li>
+              </ul>
+          </div>
+          <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+      </div>
+    </div>
+</template>
+
+<script>
+import { METHODS } from 'http'
+import layout from '@/layout.json'
+
+  export default {
+    props: { references: Object },
+    data() {
+      return {
+        changeNav: false,
+        collections: 0,
+        navLinkList: layout.navLinks
+      }
+    },
+    mounted() {
+      this.collections = this.references.artContainer.$el.offsetHeight
+      window.addEventListener('scroll', () => {
+        if (window.scrollY > 0) {
+          this.changeNav = true;
+        } else {
+          this.changeNav = false;
+        }
+      });
+    },
+    methods: {
+      handleChangeNav(event) {
+        if(event == 'mouseover') {
+          this.changeNav = true;
+        } 
+        else if (event != 'mouseover' && window.scrollY < this.collections) {
+          this.changeNav = false;
+        }
+      }
+    }
+  }
+</script>
+
+<style scoped>
+  .logo {
+    transition: background 0.3s ease-in-out;
+    height: auto !important;
+    max-width: 150px;
+  }
+
+  .navbar-toggler-icon {
+    color: white;
+    background-color: transparent;
+  }
+  
+  .navbar {
+    background-color: transparent;
+    position: fixed;
+    z-index: 1001 !important;
+    top: 0;
+    transition: background 0.3s ease-in-out;
+    height: 10vh;
+  }
+
+  .navbar:hover {
+    background-color: var(--mainBlue);
+    color: black;
+    box-shadow: 0px 0px 10px rgb(44, 44, 44);
+    transition: all 0.3s ease-in;
+  }
+
+  .nav-link {
+    font-size: 1.5rem;
+    font-weight: 300 !important;
+    margin-bottom: 0px !important;
+    cursor: pointer;
+  }
+
+  .change-nav {
+    background-color: var(--mainBlue);
+    color: black;
+    box-shadow: 0px 0px 10px rgb(44, 44, 44);
+    transition: all 0.3s ease-in;
+    height: 8vh;
+  }
+
+  .change-nav .logo {
+    height: 50px;
+    width: 100px !important;
+  }
+
+  .navbar .nav-link:hover {
+    color: black;
+  }
+
+  .navbar-brand {
+    padding-left: 10px;
+    padding-right: 10px;
+    color: white;
+    font-size: 3rem;
+  }
+
+  .navbar-brand:hover {
+    opacity: 0.7;
+    transition: 0.5s all ease;
+  }
+
+
+  .nav-item {
+    font-variant: small-caps !important;
+    letter-spacing: 1px;
+  }
+
+  .nav-item::after {
+    content: "";
+    display: block;
+    width: 0px;
+    height: 2px;
+    background-color: var(--mainWhite);
+    transition: width 0.5s;
+    
+  }
+
+  .nav-item:hover::after {
+    width: 100%;
+    transition: width 0.5s;
+  }
+
+  @media (max-width: 912px) {
+    .logo, .change-nav .logo{
+      height: 36px !important;
+    }
+  }
+</style>

@@ -1,0 +1,28 @@
+{
+  "collections": [
+    {
+      "id": 1,
+      "name": "longnecks"
+    },
+    {
+      "id": 2,
+      "name": "landscapes"
+    },
+    {
+      "id": 3,
+      "name": "pencil"
+    }
+  ],
+  "navLinks": [
+    {
+      "id": 1,
+      "title": "collections",
+      "linkTo": "collections"
+    },
+    {
+      "id": 2,
+      "title": "about",
+      "linkTo": "about"
+    }
+  ]
+}
