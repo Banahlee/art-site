@@ -34,7 +34,7 @@ import Navbar from './Navbar.vue';
 
 <style scoped>
 .hero-img {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("@/assets/img/woman-forest.jpeg");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("@/assets/img/products/woman-forest.jpeg");
   height: 98%;
   background-attachment: fixed;
   background-position: center;
@@ -91,7 +91,7 @@ import Navbar from './Navbar.vue';
 
 @media (max-width: 912px) {
   .hero-img {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.5)), url("@/assets/img/woman-forest-mobile.png");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.5)), url("@/assets/img/products/woman-forest-mobile.png");
     height: 98%;
     background-position: center;
     background-repeat: no-repeat;

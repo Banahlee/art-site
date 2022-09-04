@@ -70,5 +70,11 @@
       "collection": "pencil",
       "category": ""
     }
-  ]
+  ],
+  "profile": {
+    "id": 1,
+    "title": "about the artist",
+    "bio": "Rhonda Shakur Carter is a native of California, presently residing in Arizona. She is a self-taught artist, she has loved to draw all her life, since coloring books were 10 cents and there were only 6 colors in the crayon box. Her original works are inspired by the places she's been, from the experiences she's received in life, good and bad; the people, her family, real friends and nature. She loves creating and designing just about everything!",
+    "profileImg": "iya_profile.jpeg"
+  }
 }

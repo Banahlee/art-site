@@ -1,5 +1,5 @@
 <template>
-  <div id="main" class="pt-5 main-container d-flex justify-content-center col-lg-12">
+  <div id="main" class="pt-5 main-container d-flex flex-column justify-content-center col-lg-12">
     <div class="w-100">
       <div class="title text-center mt-5">
         <h1 class="small-caps ">shakur's art</h1>
@@ -35,6 +35,7 @@
           />
       </div>      
     </div>
+    <hr class="mt-4">
   </div>
 </template>
 
@@ -117,5 +118,20 @@ import layout from '@/layout.json'
 .collection-tab:hover::after {
   width: 100%;
   transition: width 0.5s;
+}
+
+hr {
+  height: 1px;
+  border: 0;
+  clear:both;
+  display:block;
+  width: 75%;               
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 912px) {
+  hr {
+    display: none;
+  }
 }
 </style>

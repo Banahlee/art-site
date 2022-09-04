@@ -4,9 +4,9 @@
     :class="mouseleaveCard"
     @mouseleave="dropCard()"
   >
-    <div class="w-100 content-container">
-      <div class="w-100 flex-column my-auto align-items-center w-100 img-container d-flex justify-content-center">
-        <img id="" class="max-100 thumbnail" :src="require(`@/assets/img/${thumbnail}`)" alt=""/>
+    <div class="max-100 content-container">
+      <div class="flex-column my-auto align-items-center img-container d-flex justify-content-center">
+        <img id="" class="mb-2 thumbnail" :src="require(`@/assets/img/products/${thumbnail}`)" alt=""/>
         <!-- <div class="py-1 small-caps w-100 text-center view-bar">view</div> -->
       </div>
       <div class="card-footer align-items-center text-container montserrat d-flex justify-content-center mt-3">
@@ -55,6 +55,8 @@ import { set } from 'vue'
   top: 0;
   cursor: pointer;
   transform: scale(1);
+  border: 0px solid gray;
+  transition: all .3s ease-in-out;
 }
 
 .card:hover {
@@ -62,7 +64,6 @@ import { set } from 'vue'
   border: 1px solid gray;
   top: -20px;
   transition: all .3s ease-in-out;
-  /* transform: scale(1.02); */
 }
 
 .mouseleaveCard {
@@ -85,11 +86,13 @@ import { set } from 'vue'
 
 .img-container {
   position: relative;
+  overflow: hidden;
+  display: inline-block;
 }
 
 img {
   max-height: var(--artHeight);
-  box-shadow: 0px 5px 5px rgb(160, 159, 159);
+  box-shadow: 0px 5px 5px var(--shadowColor);
   background-color: transparent;
 }
 
@@ -101,7 +104,7 @@ hr {
   font-size: 1.25rem;
 }
 
-@media (max-width: 480px) {
+@media (max-width: 1280px) {
   .card {
     min-height: 10%;
     border: none !important;
@@ -111,6 +114,18 @@ hr {
 
   .title {
     font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 912px) {
+  .card {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+
+  img {
+    max-width: 100% !important;
+    max-height: 340px;
   }
 }
 </style>
