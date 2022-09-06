@@ -1,19 +1,20 @@
 <template>
   <div 
-    class="card mx-4 my-4 p-3 col-xs-12 col-lg-3 d-flex align-items-center justify-content-center"
-    :class="mouseleaveCard"
+    class="card mx-4 my-4 p-3 col-xs-12 col-xl-lg d-flex align-items-center justify-content-center"
+    :class="art.collection == 'landscapes' ? 'col-lg-4' : 'col-lg-3'"
     @mouseleave="dropCard()"
+    @click="setCurrentProduct(art)"
   >
     <div class="max-100 content-container">
       <div class="flex-column my-auto align-items-center img-container d-flex justify-content-center">
-        <img id="" class="mb-2 thumbnail" :src="require(`@/assets/img/products/${thumbnail}`)" alt=""/>
+        <img id="" class="mb-2 thumbnail" :src="require(`@/assets/img/products/${art.thumbnail}`)" alt=""/>
         <!-- <div class="py-1 small-caps w-100 text-center view-bar">view</div> -->
       </div>
       <div class="card-footer align-items-center text-container montserrat d-flex justify-content-center mt-3">
         <div class="max-100 w-100 text-center">
-          <h3 class="title w-100 mb-0">{{ title }}</h3>
+          <h3 class="title w-100 mb-0">{{ art.title }}</h3>
           <hr>
-          <span class="price small-caps mx-auto">{{ price != 'private collection' ? `$${price}` : price }}</span>
+          <span class="price small-caps mx-auto">{{ art.price != 'private collection' ? `$${art.price}` : art.price }}</span>
         </div>
       </div>
     </div>
@@ -24,10 +25,7 @@
 import { set } from 'vue'
   export default {
     props: {
-      title: String,
-      category: String,
-      thumbnail: String,
-      price: String
+      art: Object
     },
     data() {
       return {
@@ -35,6 +33,10 @@ import { set } from 'vue'
       }
     },
     methods: {
+      setCurrentProduct(product) {
+        this.$store.dispatch('setCurrentProduct', product);
+        console.log('current product: ', this.$store.state.currentProduct);
+      },
       dropCard() {
         this.mouseleaveCard = 'mouseleaveCard';
         setTimeout(() => {
@@ -51,7 +53,7 @@ import { set } from 'vue'
   min-height: 20%;
   position: relative;
   background-color: #e5e5e526;
-  box-shadow: 0px 5px 5px var(--shadowColor);
+  box-shadow: none;
   top: 0;
   cursor: pointer;
   transform: scale(1);
@@ -64,6 +66,7 @@ import { set } from 'vue'
   border: 1px solid gray;
   top: -20px;
   transition: all .3s ease-in-out;
+  box-shadow: 0px 5px 15px var(--shadowColor);
 }
 
 .mouseleaveCard {
@@ -92,7 +95,7 @@ import { set } from 'vue'
 
 img {
   max-height: var(--artHeight);
-  box-shadow: 0px 5px 5px var(--shadowColor);
+  box-shadow: 1px 5px 5px var(--shadowColor);
   background-color: transparent;
 }
 

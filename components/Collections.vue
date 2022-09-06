@@ -29,10 +29,13 @@
           <Card
             v-for="art in filteredArtList"
             :key="art.number"
+            :art="art"
+          /> 
+          
+            <!-- 
             :title="art.title"
             :thumbnail="art.thumbnail"
-            :price="art.price"
-          />
+            :price="art.price" -->
       </div>      
     </div>
     <hr class="mt-4">
@@ -132,6 +135,11 @@ hr {
 @media (max-width: 912px) {
   hr {
     display: none;
+  }
+
+  .collection-list {
+    font-size: 12px;
+   
   }
 }
 </style>
