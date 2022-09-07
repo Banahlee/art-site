@@ -4,7 +4,7 @@ export default {
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: 'art-site',
+    title: "Shakur's Artistry",
     htmlAttrs: {
       lang: 'en'
     },
