@@ -1,52 +1,27 @@
 <template>
-    <!-- <div
-      class="navbar navbar-dark navbar-expand-lg sticky-top w-100" 
-      :class="[changeNav ? 'change-nav' : '']"
-    >
-      <div class="max-100 container col-lg-12">
-          <a href="#" class=" d-flex align-items-center navbar-brand great-vibes">
-            <img class="max-100 logo" src="@/assets/img/logo/shakur-logo.png" alt="">
-          </a>
+  <b-navbar
+    class="navbar navbar-dark container sticky-top max-100 col-lg-12" 
+    :class="[changeNav ? 'change-nav' : '']"
+    toggleable="md"
+  >
+    <a href="#" class=" d-flex align-items-center navbar-brand great-vibes">
+      <img class="max-100 logo" src="@/assets/img/logo/shakur-logo.png" alt="">
+    </a>
 
-          <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
+    <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
 
-          <div class="justify-content-end" id="navbarCollapse mr-auto">
-              <ul class="navbar-nav">
-                  <li 
-                    v-for="link in navLinkList"
-                    :key="link.id"
-                    class="nav-item mr-5"
-                  >
-                      <p @click="scrollTo(link.linkTo)" class="nav-link text-white">{{ link.title }}</p>
-                  </li>
-              </ul>
-          </div>
-      </div> -->
-
-    <b-navbar
-      class="navbar navbar-dark container sticky-top max-100 col-lg-12" 
-      :class="[changeNav ? 'change-nav' : '']"
-      toggleable="md"
-    >
-      <a href="#" class=" d-flex align-items-center navbar-brand great-vibes">
-        <img class="max-100 logo" src="@/assets/img/logo/shakur-logo.png" alt="">
-      </a>
-
-      <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
-
-      <b-collapse class="w-100 collapse navbar-collapse justify-content-end" id="nav-collapse" is-nav>
-          <ul class="navbar-nav">
-              <li 
-                v-for="link in navLinkList"
-                :key="link.id"
-                class="nav-item mr-5"
-              >
-                  <p @click="scrollTo(link.linkTo)" class="nav-link text-white">{{ link.title }}</p>
-              </li>
-          </ul>
-      </b-collapse>
-    </b-navbar>
-    <!-- </div> -->
+    <b-collapse class="w-100 collapse navbar-collapse justify-content-end" id="nav-collapse" is-nav>
+        <ul class="navbar-nav">
+            <li 
+              v-for="link in navLinkList"
+              :key="link.id"
+              class="nav-item mr-5"
+            >
+                <p @click="scrollTo(link.linkTo)" class="nav-link text-white">{{ link.title }}</p>
+            </li>
+        </ul>
+    </b-collapse>
+  </b-navbar>
 </template>
 
 <script>

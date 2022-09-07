@@ -1,13 +1,17 @@
 <template>
-  <div class="detail-page d-flex justify-content-center align-items-center">
-    <Details />
+  <div>
+    <Navbar2 />
+    <div class="detail-page d-flex justify-content-center align-items-center">
+      <Details />
+    </div>    
   </div>
 </template>
 
 <script>
+import Navbar2 from '../components/utils/Navbar2.vue'
 import Details from '../components/Details.vue';
     export default {
-    components: { Details }
+    components: { Details, Navbar2 }
 }
 </script>
 

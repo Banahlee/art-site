@@ -13,6 +13,7 @@
   --mainWhite: whitesmoke;
   --artWidth: 800px;
   --artHeight: 380px;
+  --artBackgroundColor: rgba(204, 204, 204, 0.183);
   --shadowColor: rgb(190 189 189)
 }
 
@@ -58,6 +59,18 @@ a {
 .link:hover::after{
   width: 100%;
   transition: width 0.5s;
+}
+
+.change-nav {
+  background-color: var(--mainBlue);
+  color: black;
+  box-shadow: 0px 0px 10px rgb(44, 44, 44);
+  transition: all 0.3s ease-in;
+}
+
+.change-nav .logo {
+  height: 50px;
+  width: 100px !important;
 }
 
 @keyframes drop {

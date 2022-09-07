@@ -13,7 +13,7 @@
         <div class="max-100 w-100 text-center">
           <h3 class="title w-100 mb-0">{{ art.title }}</h3>
           <hr>
-          <span class="price small-caps mx-auto">{{ art.price != 'private collection' ? `$${art.price}` : art.price }}</span>
+          <span class="price small-caps mx-auto">{{ art.category == 'for sale' ? `$${art.price}` : 'privately owned' }}</span>
         </div>
       </div>
     </div>
@@ -87,7 +87,7 @@ import { set } from 'vue'
 }
 
 .img-container {
-  background-color: rgba(204, 204, 204, 0.183);
+  background-color: var(--artBackgroundColor);
   position: relative;
   overflow: hidden;
   display: inline-block;
