@@ -6,7 +6,7 @@
       "imgs": [""],
       "title": "She",
       "price": "private collection",
-      "descrpition": "",
+      "description": "Behold! The best art you'll ever lay eyes on",
       "collection": "longnecks",
       "category": ""
     },
@@ -16,7 +16,7 @@
       "imgs": [""],
       "title": "Radiance",
       "price": "1200",
-      "descrpition": "",
+      "description": "Behold! The best art you'll ever lay eyes on",
       "collection": "longnecks",
       "category": "for sale"
     },
@@ -26,7 +26,7 @@
       "imgs": [""],
       "title": "In Time Love Comes",
       "price": "2550",
-      "descrpition": "",
+      "description": "Behold! The best art you'll ever lay eyes on",
       "collection": "longnecks",
       "category": "for sale"
     },
@@ -36,7 +36,7 @@
       "imgs": [""],
       "title": "No Girls Allowed!",
       "price": "2200",
-      "descrpition": "",
+      "description": "Behold! The best art you'll ever lay eyes on",
       "collection": "landscapes",
       "category": "for sale"
     },
@@ -46,7 +46,7 @@
       "imgs": [""],
       "title": "When you hear the hounds",
       "price": "3200",
-      "descrpition": "",
+      "description": "Behold! The best art you'll ever lay eyes on",
       "collection": "landscapes",
       "category": "for sale"
     },
@@ -56,7 +56,7 @@
       "imgs": [""],
       "title": "Z",
       "price": "1800",
-      "descrpition": "",
+      "description": "",
       "collection": "landscapes",
       "category": "for sale"
     },
@@ -66,7 +66,7 @@
       "imgs": [""],
       "title": "Gye Nayme",
       "price": "private collection",
-      "descrpition": "",
+      "description": "",
       "collection": "pencil",
       "category": ""
     }

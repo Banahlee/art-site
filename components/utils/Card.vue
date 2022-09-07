@@ -1,16 +1,15 @@
 <template>
   <div 
-    class="card mx-4 my-4 p-3 col-xs-12 col-xl-lg d-flex align-items-center justify-content-center"
-    :class="art.collection == 'landscapes' ? 'col-lg-4' : 'col-lg-3'"
+    class="card mx-4 my-4 p-3 col-xs-12 col-lg-3 col-xl-4 d-flex align-items-center justify-content-center"
     @mouseleave="dropCard()"
     @click="setCurrentProduct(art)"
   >
-    <div class="max-100 content-container">
-      <div class="flex-column my-auto align-items-center img-container d-flex justify-content-center">
+    <div class="w-100 max-100 content-container">
+      <div class="w-100 py-2 flex-column my-auto align-items-center img-container d-flex justify-content-center">
         <img id="" class="mb-2 thumbnail" :src="require(`@/assets/img/products/${art.thumbnail}`)" alt=""/>
         <!-- <div class="py-1 small-caps w-100 text-center view-bar">view</div> -->
       </div>
-      <div class="card-footer align-items-center text-container montserrat d-flex justify-content-center mt-3">
+      <div class="align-items-center text-container montserrat d-flex justify-content-center mt-3">
         <div class="max-100 w-100 text-center">
           <h3 class="title w-100 mb-0">{{ art.title }}</h3>
           <hr>
@@ -35,6 +34,7 @@ import { set } from 'vue'
     methods: {
       setCurrentProduct(product) {
         this.$store.dispatch('setCurrentProduct', product);
+        this.$router.push('/product-details')
         console.log('current product: ', this.$store.state.currentProduct);
       },
       dropCard() {
@@ -50,9 +50,8 @@ import { set } from 'vue'
 
 <style scoped>
 .card {
-  min-height: 20%;
+  max-width: 600px;
   position: relative;
-  background-color: #e5e5e526;
   box-shadow: none;
   top: 0;
   cursor: pointer;
@@ -88,6 +87,7 @@ import { set } from 'vue'
 }
 
 .img-container {
+  background-color: rgba(204, 204, 204, 0.183);
   position: relative;
   overflow: hidden;
   display: inline-block;
@@ -96,28 +96,27 @@ import { set } from 'vue'
 img {
   max-height: var(--artHeight);
   box-shadow: 1px 5px 5px var(--shadowColor);
-  background-color: transparent;
+  background-color: rgba(204, 204, 204, 0.183);
 }
 
 hr {
   margin: 0.5rem 0.5rem;
 }
 
-.price {
+.title  {
   font-size: 1.25rem;
 }
-
+.price {
+  font-size: 1rem;
+}
 @media (max-width: 1280px) {
   .card {
-    min-height: 10%;
+    /* min-height: 10%; */
     border: none !important;
     background-color: transparent;
     box-shadow: none;
   }
 
-  .title {
-    font-size: 1.5rem;
-  }
 }
 
 @media (max-width: 912px) {

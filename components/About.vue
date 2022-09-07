@@ -1,5 +1,5 @@
 <template>
-  <div class="about-container mb-2 container col-12 d-flex flex-wrap-reverse justify-content-center align-items-center">
+  <div class="about-container mb-3 container col-12 d-flex flex-wrap-reverse justify-content-center align-items-center">
     <div class="bio-container col-lg-9">
       <h1 class="title-name small-caps text-center my-3">rhonda shakur carter</h1>
       <hr>
@@ -61,7 +61,7 @@ hr {
   .bio-container {
     max-height: 80%;
     border: 0.75px solid var(--mainBlue);
-    border-radius: 10px;
+    /* border-radius: 10px; */
     box-shadow: 0px 15px 15px var(--shadowColor);
   }
 
