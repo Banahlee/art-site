@@ -1,9 +1,9 @@
 <template>
-  <div class="detail-container my-4 d-flex">
-    <div class="img-container max-100 p-3 py-3 mb-2 d-flex justify-content-center align-items-center max-100 col-lg-8 col-xs-12">
+  <div class="detail-container col-12 my-4 d-flex">
+    <div class="img-container mr-3 p-3 py-3 mb-2 d-flex justify-content-center align-items-center max-100 col-lg-9 col-xs-12">
       <img class="max-100" :src="require(`@/assets/img/products/${art.thumbnail}`)" alt="">
     </div>
-    <div class="info-container col-lg-4 col-xs-12">
+    <div class="info-container col-lg-3 col-xs-12">
       <div class="text-container">
         <h1 class="title pt-2">{{ art.title }}</h1>
         <p class="price small-caps">{{ art.category == 'for sale' ? `$${art.price}` : 'privately owned' }}</p>
@@ -28,8 +28,7 @@
 <style lang="scss" scoped>
 
 .detail-container {
-  max-width: 99vw !important;
-  width: 100%;
+  max-width: 100vw !important;
   padding: 48px;
 }
 
@@ -39,8 +38,8 @@
 }
 
 img {
-  max-height: 600px;
-  box-shadow: 0px 10px 10px -2px var(--shadowColor);
+  // max-height: 800px;
+  box-shadow: 0px 15px 15px -8px var(--shadowColor);
 }
 
 .title {
@@ -58,7 +57,6 @@ img {
 @media (max-width: 991px) {
   .detail-container {
     flex-direction: column;
-    margin-top: 5rem !important;
     height: 100%;
     width: 100%;
     padding: 0px;
@@ -82,16 +80,5 @@ img {
 }
 
 @media (min-width: 1800px) {
-  .detail-container {
-    width: 80%;
-  }
-
-  .img {
-    max-height: 800px !important;
-  }
-
-  .img-container {
-    min-height: 800px;
-  }
 }
 </style>

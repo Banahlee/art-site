@@ -1,7 +1,7 @@
 <template>
   <div>
     <Navbar2 />
-    <div class="detail-page d-flex justify-content-center align-items-center">
+    <div class="detail-page d-flex justify-content-center ">
       <Details />
     </div>    
   </div>
