@@ -133,6 +133,10 @@ hr {
 }
 
 @media (max-width: 912px) {
+  .main-container {
+    padding-top: 3rem !important;
+  }
+
   hr {
     display: none;
   }

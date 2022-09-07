@@ -1,5 +1,5 @@
 <template>
-  <div class="about-container mb-3 container col-12 d-flex flex-wrap-reverse justify-content-center align-items-center">
+  <div class="about-container mb-3 pt-4 container col-12 d-flex flex-wrap-reverse justify-content-center align-items-center">
     <div class="bio-container col-lg-9">
       <h1 class="title-name small-caps text-center my-3">rhonda shakur carter</h1>
       <hr>
