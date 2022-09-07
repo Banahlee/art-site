@@ -45,7 +45,6 @@ export default {
 img {
   max-width: 70% !important;
   border: 0.25px solid white;
-  border-radius: 10px;
   box-shadow: 1px 10px 15px var(--shadowColor);
 }
 
@@ -61,7 +60,6 @@ hr {
   .bio-container {
     max-height: 80%;
     border: 0.75px solid var(--mainBlue);
-    /* border-radius: 10px; */
     box-shadow: 0px 15px 15px var(--shadowColor);
   }
 
