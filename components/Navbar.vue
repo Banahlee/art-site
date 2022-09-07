@@ -76,6 +76,9 @@ import layout from '@/layout.json'
     background-color: transparent;
     position: fixed;
     z-index: 1001 !important;
+    width: 100vw !important;
+    max-width: 100vw !important;
+    overflow: hidden !important;
     top: 0;
     transition: background 0.3s ease-in-out;
   }

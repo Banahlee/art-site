@@ -35,7 +35,11 @@ import Navbar from './Navbar.vue';
 <style scoped>
 .hero-img {
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("@/assets/img/products/woman-forest.jpeg");
-  height: 98%;
+  height: 95%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
@@ -62,6 +66,10 @@ import Navbar from './Navbar.vue';
   background-color: white;
   z-index: 4 !important;
   box-shadow: 0px 5px 5px var(--shadowColor);
+}
+
+.fa-solid {
+  color: black !important;
 }
 
 .hero-text {
@@ -94,11 +102,6 @@ import Navbar from './Navbar.vue';
 @media (max-width: 912px) {
   .hero-img {
     background-image: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.5)), url("@/assets/img/products/woman-forest-mobile.png");
-    height: 95% !important;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    position: relative;
     width: 100vw !important;
     max-width: 100%;
   }
