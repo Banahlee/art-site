@@ -96,7 +96,7 @@ import { set } from 'vue'
 img {
   max-height: var(--artHeight);
   box-shadow: 1px 5px 5px var(--shadowColor);
-  background-color: rgba(204, 204, 204, 0.183);
+  background-color: transparent;
 }
 
 hr {
