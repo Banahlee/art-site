@@ -33,39 +33,6 @@ import Navbar from './Navbar.vue';
 </script>
 
 <style scoped>
-
-@keyframes drop {
-  0% {
-      opacity: 0;
-      transform: translateY(-80px);
-  }
-  100%{
-      opacity: 1;
-      transform: translateY(0px);
-  }
-}
-
-@keyframes rise {
-  0% {
-    opacity: 0;
-    transform: translateY(100px);
-  }
-  100%  {
-    opacity: 1;
-    transform: translateY(0px);
-  }
-}
-
-@keyframes zoom-out {
-  0% {
-      opacity: 25%;
-      transform: scale(1.25)
-  }
-  100%{
-      opacity: 100%;
-      transform: scale(1);
-  }
-}
 .hero-img {
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("@/assets/img/products/woman-forest.jpeg");
   height: 98%;
