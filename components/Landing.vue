@@ -123,4 +123,13 @@ import Navbar from './Navbar.vue';
 }
 }
 
+@media (max-width: 400px) {
+
+  .hero-img {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.5)), url("@/assets/img/products/woman-forest-mobile.png");
+    width: 400px !important;
+    max-width: 400px !important;
+  }
+}
+
 </style>
