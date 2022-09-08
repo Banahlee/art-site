@@ -103,7 +103,7 @@ import Navbar from './Navbar.vue';
   .hero-img {
     background-image: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.5)), url("@/assets/img/products/woman-forest-mobile.png");
     width: 100vw !important;
-    max-width: 100%;
+    max-width: 100vw !important;
   }
 
   .landing-container {
