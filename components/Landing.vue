@@ -104,6 +104,7 @@ import Navbar from './Navbar.vue';
     background-image: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.5)), url("@/assets/img/products/woman-forest-mobile.png");
     width: 100vw !important;
     max-width: 100vw !important;
+    background-attachment: scroll;
   }
 
   .landing-container {
