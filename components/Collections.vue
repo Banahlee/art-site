@@ -38,7 +38,7 @@
             :price="art.price" -->
       </div>      
     </div>
-    <hr class="mt-4">
+    <hr>
   </div>
 </template>
 
@@ -130,6 +130,7 @@ hr {
   display:block;
   width: 75%;               
   border-top: 1px solid rgba(0, 0, 0, 0.1);
+  margin-top: 48px;
 }
 
 @media (max-width: 912px) {
@@ -138,7 +139,9 @@ hr {
   }
 
   hr {
-    display: none;
+    margin-top: 48px;
+    margin-bottom: 48px;
+    width: 100%;
   }
 
   .collection-list {

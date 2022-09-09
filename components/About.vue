@@ -1,11 +1,9 @@
 <template>
   <div class="about-container mb-3 pt-4 container col-12 d-flex flex-wrap-reverse justify-content-center align-items-center">
     <div class="bio-container col-lg-9">
-      <h1 class="title-name small-caps text-center my-3">rhonda shakur carter</h1>
-      <hr>
+      <h1 class="title small-caps text-center my-3">{{ profile.title }}</h1>
         <div class=" max-100 my-2 col-lg-8 col-xs-12 d-flex align-items-center flex-wrap-reverse p-3">
           <div class="bio-text-container px-3 mb-2 max-100 col-lg-6">
-            <h1 class="title text-center small-caps">{{ profile.title }}</h1>
             <p class="bio text-center">
               {{ profile.bio }}
             </p>        
@@ -45,22 +43,16 @@ export default {
 img {
   max-width: 70% !important;
   border: 0.25px solid white;
-  box-shadow: 1px 10px 15px var(--shadowColor);
+  box-shadow: 1px 10px 10px var(--shadowColor);
 }
 
-hr {
+/* hr {
   border-top: 1px solid var(--mainBlue);
-}
+} */
 
 @media (max-width: 991px) {
   img {
-    max-height: 350px !important;
-  }
-
-  .bio-container {
-    max-height: 80%;
-    border: 0.75px solid var(--mainBlue);
-    box-shadow: 0px 15px 15px var(--shadowColor);
+    max-height: 300px !important;
   }
 
   .title {
@@ -73,11 +65,6 @@ hr {
 }
 
 @media (min-width: 992px) {
-  .bio-container {
-    border: 0.75px solid var(--mainBlue);
-    /* border-radius: 10px; */
-    box-shadow: 10px 10px 10px var(--shadowColor);
-  }
 
   .about-container {
     height: 90vh;
@@ -88,10 +75,9 @@ hr {
   }
 
   img {
-    max-height: 700px !important;
+    max-height: 600px !important;
     border: 0.25px solid white;
-    border-radius: 10px;
-    box-shadow: 15px 15px 15px var(--shadowColor);
+    box-shadow: 8px 8px 8px var(--shadowColor);
   }
 }
 
