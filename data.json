@@ -69,6 +69,26 @@
       "description": "Charcoal and pastel on paper",
       "collection": "pencil",
       "category": "privately owned"
+    },
+    {
+      "id": 8,
+      "thumbnail": "face.png",
+      "imgs": [""],
+      "title": "Portrait",
+      "price": "privately owned",
+      "description": "Charcoal and pastel on paper",
+      "collection": "pencil",
+      "category": "privately owned"
+    },
+    {
+      "id": 9,
+      "thumbnail": "the-garden-fairy.jpg",
+      "imgs": [""],
+      "title": "The Garden Fairy",
+      "price": "1200",
+      "description": "Wood construction and acrylic paint",
+      "collection": "longnecks",
+      "category": "for sale"
     }
   ],
   "profile": {

@@ -1,7 +1,7 @@
 <template>
   <div class="detail-container col-12 my-4 d-flex">
     <div class="img-container mr-3 p-3 py-3 mb-2 d-flex justify-content-center align-items-center max-100 col-lg-9 col-xs-12">
-      <img class="max-100" :src="require(`@/assets/img/products/${art.thumbnail}`)" alt="">
+      <img class="max-100" :src="art.thumbnail" alt="">
     </div>
     <div class="info-container col-lg-3 col-xs-12">
       <div class="text-container">
@@ -9,7 +9,7 @@
         <p class="price small-caps">{{ art.category == 'for sale' ? `$${art.price}` : 'privately owned' }}</p>
         <hr>
         <p class="description">{{ art.description }}</p>
-        <h3 class="collection small-caps">collection: {{ art.collection }}</h3>
+        <!-- <h3 class="collection small-caps">collection: {{ art.collection }}</h3> -->
       </div>
     </div>
   </div>

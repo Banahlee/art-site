@@ -6,7 +6,7 @@
   >
     <div class="w-100 max-100 content-container">
       <div class="w-100 py-2 flex-column my-auto align-items-center img-container d-flex justify-content-center">
-        <img id="" class="mb-2 thumbnail" :src="require(`@/assets/img/products/${art.thumbnail}`)" alt=""/>
+        <img id="" class="mb-2 thumbnail" :src="art.thumbnail" alt=""/>
         <!-- <div class="py-1 small-caps w-100 text-center view-bar">view</div> -->
       </div>
       <div class="align-items-center text-container montserrat d-flex justify-content-center mt-3">
@@ -35,7 +35,6 @@ import { set } from 'vue'
       setCurrentProduct(product) {
         this.$store.dispatch('setCurrentProduct', product);
         this.$router.push('/product-details')
-        console.log('current product: ', this.$store.state.currentProduct);
       },
       dropCard() {
         this.mouseleaveCard = 'mouseleaveCard';

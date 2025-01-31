@@ -4,7 +4,7 @@
       <div class="title text-center mt-5">
         <h1 class="small-caps ">shakur's art</h1>
         <!-- <h3 class="small-caps">collections</h3> -->
-        <div class="tab-container">
+        <!-- <div class="tab-container">
           <ul class="collection-list navbar">
             <li
               class="collection-tab nav-item small-caps mx-2"
@@ -23,19 +23,14 @@
               {{ tab.name }}
             </li>
           </ul>          
-        </div>
+        </div> -->
       </div>
       <div class="card-container d-flex w-100 justify-content-center">
           <Card
             v-for="art in filteredArtList"
             :key="art.number"
             :art="art"
-          /> 
-          
-            <!-- 
-            :title="art.title"
-            :thumbnail="art.thumbnail"
-            :price="art.price" -->
+          />
       </div>      
     </div>
     <hr>
@@ -45,27 +40,43 @@
 <script>
 import Card from './utils/Card.vue';
 import data from '@/data.json';
-import layout from '@/layout.json'
+import layout from '@/layout.json';
+import {collection, getDocs, doc} from 'firebase/firestore'
+import { getStorage, ref } from 'firebase/storage';
+
   export default {
     components: { Card },
     data() {
       return {
-        artList: data.art,
-        filteredArtList: data.art,
+        // artList: data.art,
+        filteredArtList: [],
         collectionTabs: layout.collections,
         collection: 'all',
-        activeTab: 'all'
+        activeTab: 'all',
+        storageImage: null
       }
+    },
+    mounted() {
+      this.getProducts();
     },
     methods: {
       filterCollection(tabName) {
         this.activeTab = tabName;
+        console.log('collection')
         if (tabName == 'all') {
           this.filteredArtList = this.artList
           return
         }
         this.filteredArtList = this.artList.filter(art => art.collection == tabName)
         console.log('art list: ', tabName)
+      },
+      async getProducts() {
+        const db = this.$fire.firestore;
+        const productCollection = db.collection("art")
+        const productResponse = await getDocs(productCollection);
+        productResponse.forEach((doc) => {
+          this.filteredArtList.push(doc.data())
+        });
       }
     }
 }

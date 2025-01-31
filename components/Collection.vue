@@ -7,13 +7,14 @@
         :title="art.title"
         :thumbnail="art.thumbnail"
         :price="art.price"
-      />      
+      />
     </div>
   </div>
 </template>
 
 <script>
 import Card from './utils/Card.vue';
+
   export default {
     components: { Card },
     props: {
@@ -26,6 +27,7 @@ import Card from './utils/Card.vue';
       }
     },
     mounted() {
+      console.log('collection')
       this.getCollection(this.collectionName);
     },
     methods: {
